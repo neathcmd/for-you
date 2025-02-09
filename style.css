@@ -171,8 +171,53 @@ input::placeholder {
   color: #be9a60;
 }
 
-.success-message {
-  color: #4caf50;
-  margin-top: 10px;
-  display: none;
-}
+ .popup {
+            max-width: 300px;
+            margin: 20px auto;
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+
+        .popup img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .input {
+            margin-top: 20px;
+        }
+
+        .answer {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 2px solid #ffd1dc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #ffd1dc;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffb6c1;
+        }
+
+        .success-message {
+            color: #4CAF50;
+            margin-top: 10px;
+            display: none;
+        }
