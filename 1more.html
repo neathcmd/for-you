@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday my love</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sticker">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPr_Na9tLMmdfgAiv2OptiD1Ws6YMHjuh9VA&s"
+        />
+      </div>
+      <div class="message">
+        <p>Can you read it?🥺</p>
+      </div>
+
+      <div class="button">
+        <button class="btn" id="btn">Click</button>
+      </div>
+    </div>
+
+    <!-- Pop-up box -->
+    <div class="popup">
+      <img
+        src="https://media3.giphy.com/media/KztT2c4u8mYYUiMKdJ/200w.gif?cid=6c09b952zf8rvrwzf9rhy6d2mv314ibgaphoo7g4v4lro0mx&ep=v1_gifs_search&rid=200w.gif&ct=g"
+        alt="gif"
+      />
+      <p>
+        Happy Birthday! 🎉❤️ I wish I could give you the world, but the truth
+        is, you are my world. I’m sorry I couldn’t get you a gift, but please
+        know that my love for you is bigger than anything money can buy. You are
+        my greatest blessing, my happiness, and the most beautiful part of my
+        life. Every day with you is a gift, and I promise to always cherish and
+        love you with all my heart. I hope today brings you as much joy as you
+        bring into my life. Happy Birthday, my love! 💖 <br />
+        I love you so much bbe 🥺😘🥰
+      </p>
+      <div class="button-a">
+        <a href="./final.html" id="btn-click">Click here 🥺</a>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <script>
+      // JavaScript to toggle the pop-up and overlay
+      const button = document.getElementById("btn");
+      const popup = document.querySelector(".popup");
+      const overlay = document.querySelector(".overlay");
+
+      button.addEventListener("click", () => {
+        popup.classList.toggle("visible");
+        overlay.classList.toggle("visible");
+      });
+
+      // Close the pop-up when clicking outside (on the overlay)
+      overlay.addEventListener("click", () => {
+        popup.classList.remove("visible");
+        overlay.classList.remove("visible");
+      });
+    </script>
+  </body>
+</html>
