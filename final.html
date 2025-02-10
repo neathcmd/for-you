@@ -30,14 +30,14 @@
         alt="gif"
       />
       <p>Promise?🥺❤️</p>
-      <div class="input">
+      <!-- <div class="input">
         <h1 class="answer">Answer:</h1>
         <input type="text" id="messageInput" placeholder="Answer?" />
         <button type="submit" id="send">Send</button>
       </div>
       <p id="successMessage" class="success-message">
         Message sent successfully! 💕
-      </p>
+      </p> -->
     </div>
 
     <!-- Overlay -->
@@ -83,50 +83,50 @@
 
       //sending message
       // First, request notification permission when the page loads
-      document.addEventListener("DOMContentLoaded", function () {
-        if (!("Notification" in window)) {
-          alert("This browser does not support notifications");
-        } else {
-          Notification.requestPermission();
-        }
-      });
-
-      document.getElementById("send").addEventListener("click", function () {
-        const messageInput = document.getElementById("messageInput");
-        const message = messageInput.value;
-
-        // Check if we have permission to send notifications
-        if (Notification.permission === "granted") {
-          // Create and show the notification
-          new Notification("New Message! 💌", {
-            body: message,
-            icon: "https://media.tenor.com/O1Zk8YvgJ-EAAAAj/peach-goma-peach.gif",
-          });
-
-          // Show success message
-          const successMessage = document.getElementById("successMessage");
-          successMessage.style.display = "block";
-
-          // Clear input
-          messageInput.value = "";
-
-          // Hide success message after 3 seconds
-          setTimeout(() => {
-            successMessage.style.display = "none";
-          }, 3000);
-        } else {
-          // If we don't have permission, request it
-          Notification.requestPermission().then(function (permission) {
-            if (permission === "granted") {
-              // Try sending the notification again
-              new Notification("New Message! 💌", {
-                body: message,
-                icon: "https://media.tenor.com/O1Zk8YvgJ-EAAAAj/peach-goma-peach.gif",
-              });
-            }
-          });
-        }
-      });
+      //document.addEventListener("DOMContentLoaded", function () {
+      //  if (!("Notification" in window)) {
+      //    alert("This browser does not support notifications");
+      //  } else {
+      //    Notification.requestPermission();
+      //  }
+      //});
+      //
+      //document.getElementById("send").addEventListener("click", function () {
+      //  const messageInput = document.getElementById("messageInput");
+      //  const message = messageInput.value;
+      //
+      //  // Check if we have permission to send notifications
+      //  if (Notification.permission === "granted") {
+      //    // Create and show the notification
+      //    new Notification("New Message! 💌", {
+      //      body: message,
+      //      icon: "https://media.tenor.com/O1Zk8YvgJ-EAAAAj/peach-goma-peach.gif",
+      //    });
+      //
+      //    // Show success message
+      //    const successMessage = document.getElementById("successMessage");
+      //    successMessage.style.display = "block";
+      //
+      //    // Clear input
+      //    messageInput.value = "";
+      //
+      //    // Hide success message after 3 seconds
+      //    setTimeout(() => {
+      //      successMessage.style.display = "none";
+      //    }, 3000);
+      //  } else {
+      //    // If we don't have permission, request it
+      //    Notification.requestPermission().then(function (permission) {
+      //      if (permission === "granted") {
+      //        // Try sending the notification again
+      //        new Notification("New Message! 💌", {
+      //          body: message,
+      //          icon: "https://media.tenor.com/O1Zk8YvgJ-EAAAAj/peach-goma-peach.gif",
+      //        });
+      //      }
+      //    });
+      //  }
+      //});
     </script>
   </body>
 </html>
